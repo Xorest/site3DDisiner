@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Визуализатор</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '595707358346476');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=595707358346476&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar fixed-top navbar-expand-md  navbar-light " style=" background: #D3BCA4; opacity:.9;">
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand absolute" aria-current="page">3D Anastasy</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Index"  class="nav-link" >Главнвя</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="TypesOfDesignProjects" class="nav-link">Виды дизайн-проектов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Order" class="nav-link">Заказать</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="About" class="nav-link">Обо мне</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class=" contanerEx mt-5 mb-5 pt-1 pb-3";>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+   
+    <div class="navbar fixed-bottom footerClr text-light">
+        <div class="footerInfinite">
+            <div>
+                <h4 class="block_text"> &#183; Автвторское сопровождение в подарок</h4>
+                <h4 class="block_text"> &#183; Автвторское сопровождение в подарок</h4>
+                <h4 class="block_text"> &#183; Автвторское сопровождение в подарок</h4>
+                <h4 class="block_text"> &#183; Автвторское сопровождение в подарок</h4>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
